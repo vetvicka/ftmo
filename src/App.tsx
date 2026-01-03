@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+
+import { Badge } from './ui/primitives/badge/badge.tsx';
+import { Badges } from './ui/primitives/badges/badges.tsx';
+import { Card } from './ui/components/card/card.tsx';
+import { CardHeader } from './ui/components/card/cardHeader.tsx';
+import { CardBody } from './ui/components/card/cardBody.tsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Card>
+        <CardHeader>
+          <Badges>
+            <Badge>Ongoing</Badge>
+            <Badge outline>FTMO Challenge</Badge>
+          </Badges>
+          {/* replace inline style once moved to standalone account component */}
+          <div style={{ marginTop: '8px' }}>
+            <span className="lg body">Login: </span>
+            <span className="lg heading">TBD 2090067192</span>
+          </div>
+        </CardHeader>
+        <CardBody>body TBD</CardBody>
+      </Card>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

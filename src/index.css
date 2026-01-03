@@ -1,18 +1,32 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: sans-serif, system-ui, Avenir, Helvetica, Arial;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* ftmo styles */
+  --content-white: #ffffff;
+  --content-primary: #ffffff;
+  --content-secondary: #e9e9e9;
+  --content-tertiary: #c1c7d3;
+  --background-color: #262729;
+  --separator-color: #36373b;
+  --button-primary: #0781fe;
+  /* --badge-success-bg: #03C7B4; */
+  /* --badge-outline-bg: #0781FE; */
+
+  background-color: gray;
+  color: #ffffff;
+  font-size: var(--font-size-md);
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--separator-color);
+  margin: 12px 0;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,15 +38,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
 }
 
 button {
@@ -57,7 +62,11 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    --background-color: #ffffff;
+    --separator-color: #eaeaea;
+    --content-secondary: #262729;
+    --content-secondary: #36373b;
+    --content-tertiary: #737a86;
   }
   a:hover {
     color: #747bff;

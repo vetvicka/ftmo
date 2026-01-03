@@ -1,0 +1,22 @@
+.badge {
+  /* these vars might belong to different global file, depends if any other components share it in a semantic way */
+  --badge-primary: #03c7b4;
+  --badge-outline: #0781fe;
+
+  border-radius: 666px;
+  background: var(--badge-primary);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  white-space: nowrap;
+
+  &.outline {
+    background: rgba(7, 129, 254, 0.1);
+    border: 1px solid var(--badge-outline);
+    color: var(--badge-outline);
+  }
+}

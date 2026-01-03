@@ -1,0 +1,29 @@
+:root {
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+}
+
+.heading {
+  color: var(--content-primary);
+}
+
+.body {
+  color: var(--content-secondary);
+}
+
+.label {
+  color: var(--content-tertiary);
+}
+
+.sm {
+  font-size: var(--font-size-sm);
+}
+
+.md {
+  font-size: var(--font-size-md);
+}
+
+.lg {
+  font-size: var(--font-size-lg);
+}
