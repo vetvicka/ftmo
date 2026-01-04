@@ -8,6 +8,7 @@ import { CardBody } from '../card/cardBody';
 import styles from './accountCard.module.css';
 import { StatsHighlight } from '../statsHighlight/statsHighlight';
 import { Button } from '../../primitives/button/button';
+import { BalanceChart } from '../balanceChart/balanceChart';
 
 export type Badge = {
   text: string;
@@ -74,7 +75,9 @@ export function AccountCard({
 
         <div className={styles.menu}>
           <div className={styles.mainMenu}>
-            <button className={`${styles.menuItem} ${styles.chart}`}>Chart TDB</button>
+            <div className={`${styles.menuItem} ${styles.chart}`}>
+              <BalanceChart />
+            </div>
             {menuItems.map((item) => (
               <div key={item.label} className={`${styles.menuItem}`}>
                 <LinkButton>{item.label}</LinkButton>
