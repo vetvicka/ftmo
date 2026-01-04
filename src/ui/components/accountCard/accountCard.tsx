@@ -10,7 +10,7 @@ import { StatsHighlight } from '../statsHighlight/statsHighlight';
 import { Button } from '../../primitives/button/button';
 import { BalanceChart, type ChartDataPoint } from '../balanceChart/balanceChart';
 
-export type Badge = {
+type Badge = {
   text: string;
   outline?: boolean;
 };
@@ -46,9 +46,9 @@ export function AccountCard({
       <CardHeader>
         <div className={styles.accountHeader}>
           <Badges>
-            {badges?.map((badge) => (
-              // assuming duplicate banges do not happen
-              <Badge key={badge.text} outline={badge.outline}>
+            {badges?.map((badge, i) => (
+              // might find better key, depends on how and where are badges defined
+              <Badge key={`${badge.text}-${i}`} outline={badge.outline}>
                 {badge.text}
               </Badge>
             ))}
