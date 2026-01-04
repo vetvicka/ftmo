@@ -11,8 +11,16 @@ const badges = [
   },
 ];
 
+const menuItems = [
+  { label: 'Credentials', link: '#' },
+  { label: 'Metrix', link: '#' },
+  { label: 'Live MetriX', link: '#' },
+  { label: 'Mentor', link: '#' },
+  { label: 'Analysis', link: '#' },
+];
+
 export function AccountOverview() {
-  const { accountData, balanceCurve, loading, error } = useAccountData();
+  const { accountData, /* balanceCurve,*/ loading, error } = useAccountData();
 
   if (loading) return <div>Loading...</div>;
   if (error || !accountData) return <div>Error: {error}</div>;
@@ -25,6 +33,7 @@ export function AccountOverview() {
       login={accountData.login}
       unrealizedPnL={accountData.equity - accountData.balance}
       badges={badges}
+      menuItems={menuItems}
     />
   );
 }

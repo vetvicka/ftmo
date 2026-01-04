@@ -14,6 +14,11 @@ export type Badge = {
   outline?: boolean;
 };
 
+export type MenuItems = {
+  label: string;
+  link: string;
+};
+
 type AccountCardProps = {
   currentDailyProfit: number;
   equity: number;
@@ -21,15 +26,8 @@ type AccountCardProps = {
   login: number;
   unrealizedPnL: number;
   badges?: Badge[];
+  menuItems: MenuItems[];
 };
-
-const menuItems = [
-  { label: 'Credentials', link: '#' },
-  { label: 'Metrix', link: '#' },
-  { label: 'Live MetriX', link: '#' },
-  { label: 'Mentor', link: '#' },
-  { label: 'Analysis', link: '#' },
-];
 
 export function AccountCard({
   currentDailyProfit,
@@ -38,6 +36,7 @@ export function AccountCard({
   login,
   unrealizedPnL,
   badges,
+  menuItems,
 }: AccountCardProps) {
   return (
     <Card>
