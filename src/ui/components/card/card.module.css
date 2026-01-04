@@ -5,7 +5,11 @@
   padding: 24px;
   border-radius: 4px;
   background-color: var(--background-color);
-  background-image: radial-gradient(circle at top left, rgba(3, 199, 180, 0.1), transparent 25%);
+  background-image: radial-gradient(
+    circle 300px at top left,
+    rgba(3, 199, 180, 0.1),
+    transparent 45%
+  );
 }
 
 .card-toggle {

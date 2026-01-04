@@ -16,6 +16,10 @@
   color: var(--content-tertiary);
 }
 
+.active {
+  color: var(--active-color);
+}
+
 .sm {
   font-size: var(--font-size-sm);
 }

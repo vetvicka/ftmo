@@ -1,0 +1,20 @@
+.statsHighlight {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.value {
+  height: var(--base-button-height);
+  background: var(--sucess-background);
+  color: var(--success-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.negative {
+    background: var(--danger-background);
+    color: var(--danger-color);
+  }
+}

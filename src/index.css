@@ -13,8 +13,18 @@
   --background-color: #262729;
   --separator-color: #36373b;
   --button-primary: #0781fe;
+  --active-color: #0781fe;
+  --border-secondary: #36373b;
+  --border-tertiary: #535456;
+
+  --sucess-background: rgba(3, 199, 180, 0.1);
+  --success-color: #03c7b4;
+  --danger-background: rgba(255, 54, 72, 0.1);
+  --danger-color: #ff3648;
   /* --badge-success-bg: #03C7B4; */
   /* --badge-outline-bg: #0781FE; */
+
+  --base-button-height: 48px;
 
   background-color: gray;
   color: #ffffff;
@@ -64,14 +74,11 @@ button:focus-visible {
     color: #213547;
     --background-color: #ffffff;
     --separator-color: #eaeaea;
+    --content-primary: #262729;
     --content-secondary: #262729;
     --content-secondary: #36373b;
     --content-tertiary: #737a86;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+    --border-secondary: #eaeaea;
+    --border-tertiary: #9b9c9d;
   }
 }
