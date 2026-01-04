@@ -8,7 +8,7 @@ import { CardBody } from '../card/cardBody';
 import styles from './accountCard.module.css';
 import { StatsHighlight } from '../statsHighlight/statsHighlight';
 import { Button } from '../../primitives/button/button';
-import { BalanceChart } from '../balanceChart/balanceChart';
+import { BalanceChart, type ChartDataPoint } from '../balanceChart/balanceChart';
 
 export type Badge = {
   text: string;
@@ -28,6 +28,7 @@ type AccountCardProps = {
   unrealizedPnL: number;
   badges?: Badge[];
   menuItems: MenuItems[];
+  chartData: ChartDataPoint[];
 };
 
 export function AccountCard({
@@ -38,6 +39,7 @@ export function AccountCard({
   unrealizedPnL,
   badges,
   menuItems,
+  chartData,
 }: AccountCardProps) {
   return (
     <Card>
@@ -76,7 +78,7 @@ export function AccountCard({
         <div className={styles.menu}>
           <div className={styles.mainMenu}>
             <div className={`${styles.menuItem} ${styles.chart}`}>
-              <BalanceChart />
+              <BalanceChart data={chartData} />
             </div>
             {menuItems.map((item) => (
               <div key={item.label} className={`${styles.menuItem}`}>
@@ -86,8 +88,6 @@ export function AccountCard({
           </div>
           <div className={`${styles.menuItem} ${styles.detailButton}`}>
             <Button>Detail</Button>
-            {/* <button className={`${styles.menuItem}`}>
-            </button> */}
           </div>
         </div>
 

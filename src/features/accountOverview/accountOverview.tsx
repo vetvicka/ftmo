@@ -1,6 +1,9 @@
+import { useMemo } from 'react';
 import { AccountCard } from '../../ui/components/accountCard/accountCard';
 import { useAccountData } from '../../api';
+import { transformChartData } from './transformChartData';
 
+// hardoceded for the demo
 const badges = [
   {
     text: 'Ongoing',
@@ -20,7 +23,8 @@ const menuItems = [
 ];
 
 export function AccountOverview() {
-  const { accountData, /* balanceCurve,*/ loading, error } = useAccountData();
+  const { accountData, balanceCurve, loading, error } = useAccountData();
+  const chartData = useMemo(() => transformChartData(balanceCurve), [balanceCurve]);
 
   if (loading) return <div>Loading...</div>;
   if (error || !accountData) return <div>Error: {error}</div>;
@@ -34,6 +38,7 @@ export function AccountOverview() {
       unrealizedPnL={accountData.equity - accountData.balance}
       badges={badges}
       menuItems={menuItems}
+      chartData={chartData}
     />
   );
 }

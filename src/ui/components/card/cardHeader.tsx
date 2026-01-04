@@ -1,5 +1,5 @@
 import styles from './card.module.css';
-import { useCardContext } from './card';
+import { useCardContext } from './cardContext';
 import { Toggle } from '../../primitives/toggle/toggle';
 
 type CardHeaderProps = {

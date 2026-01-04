@@ -8,7 +8,10 @@ type AccountData = {
   currentDailyProfit: number;
 };
 
-type BalanceCurveData = any; // TBD
+export type BalanceCurveData = {
+  balance: number[];
+  time: string[];
+};
 
 export function useAccountData() {
   const [accountData, setAccountData] = useState<AccountData | null>(null);
